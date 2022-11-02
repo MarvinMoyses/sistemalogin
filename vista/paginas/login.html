@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../vendor/bootstrap-4.6.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../vendor/fontawesome-free-6.2.0-web/css/all.css">
+    <script src="../vendor/alertify.js"></script>
+    <link rel="stylesheet" href="../vendor/css/alertify.css">
+    <link rel="stylesheet" href="../css/login.css">
+
+    <script>
+        function mensaje() {
+            alertify
+                .alert("Si no cuentas con un login ve y registrate", function () {
+                    alertify.message('OK');
+                });
+        }
+    </script>
+    <title>Login</title>
+</head>
+
+<body onload="mensaje()">
+
+    <div id=" formulariologin form-control ">
+        <form id="frmlogin" name="frmlogin" action="../../controlador/ctrlLogin.php" target="_blank" method="post">
+            <label for="">
+                <h1 class="text-warning"><i class="fa-solid fa-hippo text-warning "><i
+                            class="fa-sharp fa-solid fa-cow text-warning"></i> </i>Login</h1>
+            </label>
+            <div class="col-sm">
+                <div class="row">
+
+                    <!--Primera parte del formulario-->
+                    <div class="col">
+
+                        <i class="fa-sharp fa-solid fa-skull text-warning"></i>
+                        <label class="text-warning">nombre:</label><br />
+                        <input type="text" id="txtUser" name="txtUser" class="form-control"
+                            placeholder="Ingrese usuario" required /><br />
+
+                        <i class="fa-solid fa-ghost text-warning"></i>
+                        <label class="text-warning">Contraseña:</label><br />
+                        <input type="password" id="txtcontra" name="txtcontra" class="form-control"
+                            placeholder="ingrese su contraseña" required /><br />
+
+
+                    </div>
+                </div>
+                <div class="col">
+                    <i class="fa-solid fa-check"></i> <input type="submit" class="btn btn-success" value="Entrar"
+                        name="btnentrar" id="btnentrar">
+                    <i class="fa-solid fa-xmark"></i><input type="submit" class="btn btn-danger" value="cancelar"
+                        name="btncancerlar" id="btncancelar">
+                </div>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>
+
+<!-- en boostrab en el ejemplo de forms 
+    ocupar el de validaciones form validation
+    o el ultimo ejemplo 
+
+    
+-->

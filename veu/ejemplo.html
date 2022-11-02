@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="veu.js"></script>
+    
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script> <!-- paquete de link vue otro -->
+
+    <div id="app">
+      <input type="text" v-on:input="cambiartitulo">
+      <input type="text" v-model="tema">
+      <p v-once >{{ titulo }} </p>
+      <span>{{ observaciones }}</span>
+      <p>{{tema}}</p>
+    <p>{{ saludar() }}</p>
+    <p>{{saludar()}} - <a v-bind:href="link">google</a></p>
+    
+    <hr>
+    <p v-html="otrolink"></p>
+    </div>
+    
+    
+</body>
+</html>
+
+<script>
+
+    
+new Vue({
+    el: "#app",
+    data: {
+      titulo: "hola mundo",
+      observaciones: "programando con vue",
+      tema:"este es el tema de vue",
+      link:"http://google.com",
+      otrolink:'<a href="http://google.com">gooooogle</a>',
+      contador: 0,
+    },
+    methods: {
+      cambiartitulo: function(event) {
+        this.titulo = event.target.value; //sirve para cambiar el titulo 
+      },
+    saludar: ()=>{
+    this.titulo="se modifico";
+        return this.titulo;
+    },
+    contar : function(){
+        this.contador++;
+    },
+    reset : function(){
+    this.contador=0;
+    }
+    }});
+</script>

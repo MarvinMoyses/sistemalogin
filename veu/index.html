@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue basics</title>
+   <!--  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=jost:wght@400;700&display-swap"
+        rel="stylesheet"> -->
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@next" defer></script><!-- paquete de vue link a ocupar -->
+    <script src="veu.js"></script>
+   <!--  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script> -->
+</head>
+
+<body>
+    <header>
+        <h1>FriendList</h1>
+    </header>
+
+    <section id="app">
+        <ul>
+            <li>
+                <h2>manuel mortero</h2>
+                <button v-on:click="mo">mostrardetalle</button>
+                <ul>
+                    <li><strong>Phone:</strong>01234 5678 991</li>
+                    <li><strong>Email:</strong>manuel@localhost.com</li>
+                </ul>
+            </li>
+            <li>
+                <h2>gamaliel jones</h2>
+                <button v-on:click="mo">mostrardetalle</button>
+                <ul>
+                    <li><strong>Phone:</strong>01234 5678 991</li>
+                    <li><strong>Email:</strong>gamaliel@localhost.com</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+</body>
+<script>
+    new Vue({
+    el: "#app",
+    data: {
+      mostrardetalle: "",
+    
+     
+    },
+    methods: {
+      mo: function(event) {
+      console.log("holas"); //sirve para cambiar el titulo 
+      },
+   
+    }});
+
+
+</script>
+</html>

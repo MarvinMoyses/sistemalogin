@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/formulario.css">
+    <script src="../vendor/alertify.js"></script>
+    <link rel="stylesheet" href="../vendor/css/alertify.css">
+    <script>
+        function mensaje() {
+            alertify
+                .alert("Bienvenido a espacial state", function () {
+                 alertify.message('OK');
+                });
+        }
+        function mensaje2() {
+            alertify
+                .alert("Te vamos a robar Toda tu info con fines Practicos Gracias", function () {
+                 alertify.message('OK');
+                });
+        }
+    </script>
+    <title> Formulario</title>
+    
+</head>
+<body onload="mensaje()">
+    <form id="frmlogin" name="frmlogin2" action="phps/validarlogin2.php" target="_blank" method="post">
+    <section class="from-register">
+        <h4>Formulario Registro</h4>
+        <input class="controls" type="text" name="txtUser" id="txtUser" placeholder="ingrese su nombre" required>
+        <input class="controls" type="text" name="apellido" id="apellido" placeholder="ingrese su apellido" required>
+        <input class="controls" type="email" name="correo" id="correo" placeholder="ingrese su correo" required>
+        <input class="controls" type="password" name="txtcontra" id="txtcontra" placeholder="ingrese su contraseña" required>
+        <p>Estoy de acuerdo con <a href="#" onclick="mensaje2()">Terminos y condiciones</a></p>
+        <input class="botons" type="submit"  value="registrar" >
+        <p><a href="../../index.html">¿Ya tengo cuenta?</a></p>
+    </section>
+    </form>
+
+
+</body>
+</html> 
